@@ -7,21 +7,21 @@
 const hre = require("hardhat");
 
 async function main() {
-    const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-    const SIXTY_SECS = 60;
-    const unlockTime = currentTimestampInSeconds + SIXTY_SECS;
+    // const currentTimestampInSeconds = Math.round(Date.now() / 1000);
+    // const SIXTY_SECS = 60;
+    // const unlockTime = currentTimestampInSeconds + SIXTY_SECS;
 
-    const lockedAmount = hre.ethers.utils.parseEther("0.0001");
+    // const lockedAmount = hre.ethers.utils.parseEther("0.0001");
 
-    const Lock = await hre.ethers.getContractFactory("Lock");
-    const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+    const CeloBasic = await hre.ethers.getContractFactory("CeloBasic");
+    const cb = await CeloBasic.deploy();
 
-    console.log(`Unlock Time: ${unlockTime}`);
+    
 
-    await lock.deployed();
+    await cb.deployed();
 
     console.log(
-        `Lock with 0.0001 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+        `Celo Baisc deployed to ${cb.address}`
     );
 }
 

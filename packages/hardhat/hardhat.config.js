@@ -16,8 +16,8 @@ module.exports = {
     },
     etherscan: {
         apiKey: {
-            alfajores: process.env.CELOSCAN_API_KEY,
-            celo: process.env.CELOSCAN_API_KEY,
+            alfajores: "7M5Y1J1CE5FT66EKD1M4DBSJKVZ6WH7Y43",
+            celo: "7M5Y1J1CE5FT66EKD1M4DBSJKVZ6WH7Y43"
         },
         customChains: [
             {
