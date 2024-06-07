@@ -76,7 +76,7 @@ export default function Home() {
             {isConnected ? (
                 <div className="h2 text-center">
                     Your address: {userAddress}
-                    {isMinipay && <div>Using Minipay</div>}
+                    {isMinipay && <div>Using Minipay and your balance: {balance}  </div>}
                 </div>
             ) : (
                 <div>No Wallet Connected</div>
